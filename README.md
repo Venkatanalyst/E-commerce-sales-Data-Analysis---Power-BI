@@ -1,6 +1,10 @@
 
 # 📊 E-Commerce Sales Analysis using Power BI
 
+Tools: Power BI | Excel | DAX | Power Query | Data Modeling
+Domain: E-Commerce | Sales Analytics
+
+
 ## 📌 Project Overview
 
 This project focuses on analyzing E-commerce sales data using **Microsoft Power BI**.
