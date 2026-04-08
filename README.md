@@ -1,145 +1,180 @@
-
 # 📊 E-Commerce Sales Analysis using Power BI
 
-Tools: Power BI | Excel | DAX | Power Query | Data Modeling
-Domain: E-Commerce | Sales Analytics
-
+---
 
 ## 📌 Project Overview
 
-This project focuses on analyzing E-commerce sales data using **Microsoft Power BI**.
-The objective is to transform raw data into meaningful insights through **data modeling, DAX, and interactive dashboards**.
+This project focuses on performing an end-to-end analysis of an E-commerce dataset using **Microsoft Power BI**.
+The goal is to transform raw sales data into meaningful insights through **data preprocessing, modeling, and interactive dashboards**.
 
-The dashboard helps stakeholders understand sales performance, customer behavior, and regional trends.
+The project highlights core data analyst skills including **data cleaning, DAX calculations, data modeling, and business insight generation**.
+
+---
+
+## 🎯 Project Objectives
+
+* Analyze overall sales performance
+* Identify top-performing products and categories
+* Understand customer purchasing behavior
+* Evaluate regional sales trends
+* Build an interactive dashboard for decision-making
+
+---
+
+## ❓ Problem Statement
+
+Businesses often struggle to understand:
+
+* Which products generate the most revenue
+* Which regions perform best
+* How customer behavior impacts sales
+
+This project aims to solve these problems by creating a **data-driven dashboard** that provides clear and actionable insights.
 
 ---
 
 ## 📂 Dataset
 
-The dataset contains key business information such as:
+The dataset includes the following key attributes:
 
+* Order ID
 * Order Date
-* Sales Amount
+* Customer Name
+* Region
 * Product Category
-* Customer Details
-* Region / Location
-* Quantity Sold
-
-The dataset was cleaned and prepared before visualization.
+* Sales Amount
+* Quantity
+* Profit
 
 ---
 
-## 🛠 Tools & Technologies Used
+## 🧾 Attribute Details
 
-* **Power BI**
-* Power Query (Data Cleaning & Transformation)
-* DAX (Data Analysis Expressions)
-* Data Modeling
-* Excel (Data Source)
+| Column Name   | Description          |
+| ------------- | -------------------- |
+| Order Date    | Date of purchase     |
+| Customer Name | Name of customer     |
+| Region        | Sales region         |
+| Category      | Product category     |
+| Sales         | Revenue generated    |
+| Quantity      | Number of items sold |
+| Profit        | Profit earned        |
 
 ---
 
-## ⚙️ Data Preparation
+## 🧹 Data Preprocessing Steps
 
-* Removed duplicates and null values
-* Standardized column formats
-* Created relationships between tables
+* Removed duplicate records
+* Handled missing/null values
+* Corrected inconsistent data formats
+* Converted data types (Date, Numeric)
+* Created new calculated columns where necessary
 * Built a **Calendar Table** for time-based analysis
 
 ---
 
-## 📊 Data Modeling
+## ⚙️ Data Modeling
 
-* Established relationships between fact and dimension tables
-* Created a star schema model
-* Connected Calendar Table with sales data
+* Established relationships between tables
+* Created a **star schema**
+* Linked Calendar Table with sales data
+* Optimized data model for performance
 
 ---
 
-## 📈 Key Analysis Performed
+## 📊 Analysis & Visualizations
 
-### 1️⃣ Sales Performance Analysis
+### 📈 Sales Analysis
 
-* Total Sales, Profit, and Quantity
-* Monthly and Yearly trends
+* Total Sales, Profit, and Quantity KPIs
+* Monthly and yearly sales trends
 
-### 2️⃣ Category Analysis
+### 🛍 Category Analysis
 
-* Best-performing product categories
-* Revenue contribution by category
+* Sales contribution by product category
+* Top-performing categories
 
-### 3️⃣ Customer Insights
+### 🌍 Regional Analysis
+
+* Sales by region/state
+* Identification of high-performing locations
+
+### 👥 Customer Insights
 
 * Customer segmentation
 * High-value customers
 
-### 4️⃣ Regional Analysis
+---
 
-* Sales by region/state
-* Top-performing locations
+## 📉 Performance Insights
+
+* Certain regions contribute significantly to total revenue
+* A few product categories dominate sales
+* Sales show seasonal trends across months
+* Customer segmentation helps identify key business opportunities
 
 ---
 
-## 📉 Dashboard Features
+## 🔑 Key Analysis
 
-* Interactive filters (Slicers)
-* Drill-down functionality
-* Dynamic charts and KPIs
-* Time-based analysis (YTD, Monthly trends)
-
----
-
-## 🔍 Key Insights
-
-* Certain regions contribute the highest revenue
-* A few product categories dominate overall sales
-* Seasonal trends affect sales performance
-* Customer segmentation helps identify valuable customers
-
----
-
-## 🎯 Outcome
-
-The dashboard provides actionable insights for:
-
-* Improving sales strategy
-* Targeting high-value customers
-* Optimizing regional performance
-
----
-
-## 📌 Conclusion
-
-This project demonstrates the use of Power BI for **end-to-end data analysis**, including data cleaning, modeling, and visualization.
-It highlights strong analytical thinking and dashboard design skills.
+* Time-based analysis using Calendar Table
+* KPI tracking (Sales, Profit, Quantity)
+* Comparative analysis across regions and categories
+* Trend analysis using line charts and slicers
 
 ---
 
 ## 📸 Dashboard Preview
 
-<img width="736" height="328" alt="image" src="https://github.com/user-attachments/assets/a31e9897-c086-4dd6-9367-bb2e74bf4e28" />
+<img width="736" height="328" alt="Screenshot 2026-04-01 022828" src="https://github.com/user-attachments/assets/ad97b018-17f8-47e3-b433-08e48767f14b" />
 
 
-<img width="657" height="330" alt="image" src="https://github.com/user-attachments/assets/655cd711-e26d-4e1b-a216-1fd5d53dba6a" />
+<img width="648" height="328" alt="image" src="https://github.com/user-attachments/assets/4d7fed0d-e8c1-4a8b-be5c-50501bc2d431" />
 
 
+<img width="736" height="327" alt="image" src="https://github.com/user-attachments/assets/742cc034-369f-4cb3-8485-227f3dcd02c9" />
 
-<img width="957" height="368" alt="Screenshot 2026-04-01 020401" src="https://github.com/user-attachments/assets/c45f65c9-2f93-4486-97a6-5087a67c57e5" />
+
+---
+
+## 🛠 Tools Used
+
+* **Power BI**
+* Power Query
+* DAX (Data Analysis Expressions)
+* Microsoft Excel
+
+---
+
+## 🎯 Outcome
+
+The project delivers an interactive dashboard that helps:
+
+* Track sales performance
+* Identify business opportunities
+* Support data-driven decision making
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how Power BI can be used to transform raw data into meaningful insights.
+It showcases strong skills in **data analysis, visualization, and business understanding**.
 
 ---
 
 ## 👨‍💻 Author
 
 **V.Venkatesh**
+Data Analyst | Power BI Developer
 
-Aspiring Data Analyst
+🌐 GitHub: Venkatanalyst
+💼 LinkedIn: Venkatesh Venugopal
+📧 Email: Calepsundar08@gmail.com
+If you found this project useful or have feedback, feel free to reach out!
 
-Skills:
-
-* Power BI
-* Excel
-* Data Visualization
-* Data Cleaning
-* DAX Basics
+📚 Tags
+#PowerBI #DataAnalysis #E-Commerce #SalesAnalytics
+#DAX #DataVisualization #ExcelPowerQuery
 
 ---
