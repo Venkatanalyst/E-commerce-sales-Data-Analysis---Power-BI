@@ -169,8 +169,11 @@ It showcases strong skills in **data analysis, visualization, and business under
 Data Analyst | Power BI Developer
 
 🌐 GitHub: Venkatanalyst
+
 💼 LinkedIn: Venkatesh Venugopal
+
 📧 Email: Calepsundar08@gmail.com
+
 If you found this project useful or have feedback, feel free to reach out!
 
 📚 Tags
