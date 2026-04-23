@@ -1,10 +1,10 @@
-# 📊 E-Commerce Sales Analysis using Power BI
+# 🛒 E-Commerce Sales Analysis using Power BI
 
 ---
 
 ## 📌 Project Overview
 
-This project focuses on performing an end-to-end analysis of an E-commerce dataset using **Microsoft Power BI**.
+This project provides a comprehensive analysis of an E-commerce Sales dataset to evaluate business health, customer behavior, and regional performance. By transforming raw transactional data into an interactive Power BI dashboard, the project offers a Single Source of Truth (SSOT) for stakeholders to optimize inventory, marketing spend, and sales strategies,
 The goal is to transform raw sales data into meaningful insights through **data preprocessing, modeling, and interactive dashboards**.
 
 The project highlights core data analyst skills including **data cleaning, DAX calculations, data modeling, and business insight generation**.
@@ -13,11 +13,11 @@ The project highlights core data analyst skills including **data cleaning, DAX c
 
 ## 🎯 Project Objectives
 
-* Analyze overall sales performance
-* Identify top-performing products and categories
-* Understand customer purchasing behavior
-* Evaluate regional sales trends
-* Build an interactive dashboard for decision-making
+* **Sales Performance Tracking:** Analyze revenue trends across different months and regions.
+* **Product Insights:** Identify top-performing categories (Sports, Electronics, etc.) and low-volume products.
+* **Customer Segmentation:** Understand spending patterns based on gender and loyalty levels.
+* **Operational Efficiency:** Evaluate the impact of payment methods (PayPal, Credit Card, COD) on total revenue.
+* **Regional Benchmarking:** Compare sales across the North, South, East, and West regions to identify growth opportunities.
 
 ---
 
@@ -25,61 +25,79 @@ The project highlights core data analyst skills including **data cleaning, DAX c
 
 Businesses often struggle to understand:
 
-* Which products generate the most revenue
-* Which regions perform best
-* How customer behavior impacts sales
+* Which regions are underperforming?
+* What is the correlation between customer demographics and purchase volume?
+* Are there seasonal dips that require promotional intervention?
 
-This project aims to solve these problems by creating a **data-driven dashboard** that provides clear and actionable insights.
+This project addresses these gaps by providing clear, data-driven visibility into the end-to-end sales lifecycle.
 
 ---
 
-## 📂 Dataset
+## 📂 Data Source
 
-The dataset includes the following key attributes:
+**Dataset:** E-commerce Sales Data (Multi-table Excel/CSV)
 
-* Order ID
-* Order Date
-* Customer Name
-* Region
-* Product Category
-* Sales Amount
-* Quantity
-* Profit
+**Tables:** SalesOverall, Customer_Data, Product_Data, Store_Data
+
+**Domain:** E-commerce / Retail Analytics
+
+**Timeline:** 2023 – 2025
 
 ---
 
 ## 🧾 Attribute Details
 
-| Column Name   | Description          |
-| ------------- | -------------------- |
-| Order Date    | Date of purchase     |
-| Customer Name | Name of customer     |
-| Region        | Sales region         |
-| Category      | Product category     |
-| Sales         | Revenue generated    |
-| Quantity      | Number of items sold |
-| Profit        | Profit earned        |
+| Attribute        | Type      | Description                                           | Usage                              |
+|-----------------|----------|----------------------------------------------------|------------------------------------|
+| Sales_ID        | Key       | Unique transaction identifier                     | Data modeling & counting           |
+| Final Revenue   | Fact      | Total amount earned after discounts               | Main KPI for all visuals           |
+| Loyalty_Level   | Dimension | Customer tier (Bronze, Silver, Gold, Platinum)    | Segmentation analysis              |
+| Region          | Dimension | Geographic area (North, South, etc.)              | Regional performance comparison    |
+| Category        | Dimension | Product group (Beauty, Electronics, Home)         | Category-wise breakdown            |
+| Profit Estimate | Measure   | Calculated margin per sale                        | Profitability tracking             |
+| Order Date      | Dimension | Date of transaction                               | Time intelligence & trends         |
 
 ---
 
 ## 🧹 Data Preprocessing Steps
 
-* Removed duplicate records
-* Handled missing/null values
-* Corrected inconsistent data formats
-* Converted data types (Date, Numeric)
-* Created new calculated columns where necessary
-* Built a **Calendar Table** for time-based analysis
+* **Data Cleaning:** Handled missing values in the Cost column and removed leading/trailing spaces in Customer Names.
 
+* **Standardization:** Ensured Date formats were uniform across tables for proper relationship building.
+
+* **Column Engineering:** Created a Category Type column by concatenating Category and Sub-Category.
+
+* **Date Table:** Generated a custom Calendar Table to enable month-over-month (MoM) and Year-to-Date (YTD) analysis.
+  
 ---
 
 ## ⚙️ Data Modeling
 
-* Established relationships between tables
-* Created a **star schema**
-* Linked Calendar Table with sales data
-* Optimized data model for performance
+* **Fact Table:** SalesOverall
 
+* **Dimension Tables:** Customer_Data, Product_Data, Store_Data, Calendar
+
+* **Schema:** Star Schema with One-to-Many (1:*) relationships for optimized query performance.
+  
+---
+
+**##🧮 DAX Calculations**
+
+**Calculated Columns**
+
+**Revenue per Order:** [Amount] * [Quantity]
+
+**Sales Category:** IF([Amount] > [Avg Revenue], "Above Average", "Below Average")
+
+
+**Measures**
+
+| Measure            | DAX Formula                                                         | Business Use Case                |
+|-------------------|----------------------------------------------------------------------|---------------------------------|
+| Order Count       | `COUNT('List of Orders'[Order ID])`                                  | Tracks transaction volume       |
+| Total Revenue     | `SUM('SalesOverall'[Final Revenue])`                                 | Measures top-line growth        |
+| Current YTD       | `TOTALYTD([Total Revenue], 'Calendar'[Date])`                        | Tracks annual progress          |
+| Avg Profit Delhi  | `CALCULATE([Avg Profit], FILTER('Store', 'Store'[City] = "Delhi"))`  | Localized performance tracking  |
 ---
 
 ## 📊 Analysis & Visualizations
@@ -115,12 +133,15 @@ The dataset includes the following key attributes:
 
 ---
 
-## 🔑 Key Analysis
+## **💡 Key Insights**
 
-* Time-based analysis using Calendar Table
-* KPI tracking (Sales, Profit, Quantity)
-* Comparative analysis across regions and categories
-* Trend analysis using line charts and slicers
+* **Peak Season:** September is the highest revenue month ($57,511), while June and February are the slowest periods.
+
+* **Regional Dominance:** The North Region is the powerhouse, contributing over 57% of total revenue.
+
+* **Gender Trends:** Females have a higher average revenue ($1,232) compared to males ($1,065), with the largest gap found in the South region.
+
+* **Payment Preference:** PayPal and Credit Cards are the preferred methods, nearly equal in usage, while COD usage peaks significantly in late summer.
 
 ---
 
@@ -158,8 +179,7 @@ The project delivers an interactive dashboard that helps:
 
 ## 📌 Conclusion
 
-This project demonstrates how Power BI can be used to transform raw data into meaningful insights.
-It showcases strong skills in **data analysis, visualization, and business understanding**.
+This project successfully converts raw e-commerce transactions into a strategic tool. It highlights that while the North region is stable, targeted marketing towards male customers in the South and promotional activities in June/February could further drive growth.It showcases strong skills in **data analysis, visualization, and business understanding**.
 
 ---
 
@@ -168,11 +188,11 @@ It showcases strong skills in **data analysis, visualization, and business under
 **V.Venkatesh**
 Data Analyst | Power BI Developer
 
-🌐 GitHub: Venkatanalyst
+🌐 **GitHub:** 
 
-💼 LinkedIn: Venkatesh Venugopal
+💼 **LinkedIn:** [Venkatesh Venugopal](https://www.linkedin.com/in/venkatesh-v-dataanalyst/)
 
-📧 Email: Calepsundar08@gmail.com
+📧 **Email:** Calepsundar08@gmail.com
 
 If you found this project useful or have feedback, feel free to reach out!
 
