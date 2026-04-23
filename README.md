@@ -81,7 +81,7 @@ This project addresses these gaps by providing clear, data-driven visibility int
   
 ---
 
-**##🧮 DAX Calculations**
+## 🧮 DAX Calculations
 
 **Calculated Columns**
 
@@ -133,7 +133,7 @@ This project addresses these gaps by providing clear, data-driven visibility int
 
 ---
 
-## **💡 Key Insights**
+## 💡 Key Insights
 
 * **Peak Season:** September is the highest revenue month ($57,511), while June and February are the slowest periods.
 
@@ -146,6 +146,7 @@ This project addresses these gaps by providing clear, data-driven visibility int
 ---
 
 ## 📸 Dashboard Preview
+
 
 <img width="736" height="328" alt="Screenshot 2026-04-01 022828" src="https://github.com/user-attachments/assets/ad97b018-17f8-47e3-b433-08e48767f14b" />
 
@@ -160,10 +161,13 @@ This project addresses these gaps by providing clear, data-driven visibility int
 
 ## 🛠 Tools Used
 
-* **Power BI**
-* Power Query
-* DAX (Data Analysis Expressions)
-* Microsoft Excel
+* **Microsoft Excel:** Initial data exploration and descriptive statistics.
+
+* **Power Query (ETL):** Cleaning nulls, standardizing "Loyalty Level" naming, and merging customer/product details.
+
+* **Power BI:** Data modeling and building the interactive Executive Dashboard.
+
+* **DAX:** Creating calculated measures for YTD Sales, Average Revenue, and Regional Ranks.
 
 ---
 
@@ -188,7 +192,7 @@ This project successfully converts raw e-commerce transactions into a strategic 
 **V.Venkatesh**
 Data Analyst | Power BI Developer
 
-🌐 **GitHub:** 
+🌐 **GitHub:** https://github.com/Venkatanalyst 
 
 💼 **LinkedIn:** [Venkatesh Venugopal](https://www.linkedin.com/in/venkatesh-v-dataanalyst/)
 
@@ -196,7 +200,8 @@ Data Analyst | Power BI Developer
 
 If you found this project useful or have feedback, feel free to reach out!
 
-📚 Tags
+## 📚 Tags
+
 #PowerBI #DataAnalysis #E-Commerce #SalesAnalytics
 #DAX #DataVisualization #ExcelPowerQuery
 
